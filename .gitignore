@@ -3,6 +3,9 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+seções/
+seções cor/
+*.tif
 # C extensions
 *.so
 
