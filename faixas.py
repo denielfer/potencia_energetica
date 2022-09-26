@@ -56,7 +56,7 @@ def get_img_separado(img_n,faixas,tolerancia=0.01,tipo='v',show=True):
 if __name__ == '__main__':
     img_n = 'BlackMarble_2012_3km_gray_geo.tif'
     #linha horizontal
-    faixas = faixas_iguais(img_n,20,tolerancia=0.01)
+    faixas = faixas_iguais(img_n,4,tolerancia=0.01)
     img = gdal.Open(img_n).ReadAsArray()
     print(faixas)
     for a in faixas:
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     Image.fromarray(img[0]).show()
 
     #linha vertical
-    faixas = faixas_iguais(img_n,20,tipo = 'h',tolerancia=0.01)
+    faixas = faixas_iguais(img_n,2,tipo = 'h',tolerancia=0.01)
     img = gdal.Open(img_n).ReadAsArray()
     print(faixas)
     print(img.shape)

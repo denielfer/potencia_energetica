@@ -11,7 +11,10 @@ def filtra_terra(imagem_com_corres,valor_agua = 9,show = False,save_img=False,re
             if(show):
                 img.show()
             if(save_img):
-                img.save(save_name if save_name is not None else imagem_com_corres.split('.')[0].join('_filtrado') )
+                img.save(save_name if save_name is not None else 'terar/'+imagem_com_corres.split('/')[1].split('.')[0]+'_filtrado.png' )
         except Exception as e:
             print(f"Não foi possivel mostrar imagem. {e}")
     return f.sum() if retorno == 's' else f
+
+if __name__ == "__main__":
+            filtra_terra(f'seções cor/BlackMarble_2012_D2_geo.tif',retorno='s',show=True)
