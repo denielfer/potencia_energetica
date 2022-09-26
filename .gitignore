@@ -6,6 +6,7 @@ __pycache__/
 seções/
 seções cor/
 *.tif
+*.tiff
 # C extensions
 *.so
 
